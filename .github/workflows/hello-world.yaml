@@ -61,7 +61,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         env:
-          GIT_COMMIT: ${{ env.GIT_COMMIT }}
+          GITHUB_SHA: ${{ env.GIT_COMMIT }}
         with:
           context: app/
           push: true
