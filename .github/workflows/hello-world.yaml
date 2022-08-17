@@ -65,7 +65,7 @@ jobs:
         with:
           context: app/
           push: true
-          tags: ${{ env.docker_username }}/micronaut-app:1.0-${{ env.GIT_COMMIT }}
+          tags: ${{ env.docker_username }}/micronaut-app:latest
   Component-test:
     runs-on: ubuntu-latest
     needs: Docker-image
