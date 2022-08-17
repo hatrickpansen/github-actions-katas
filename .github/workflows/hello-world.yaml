@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Upload code artifact
-        uses: actions/upload-artrifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: code
           path: .
