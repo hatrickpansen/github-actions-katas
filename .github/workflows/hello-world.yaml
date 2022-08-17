@@ -8,8 +8,8 @@ env:
 
 jobs:
   Clone-down:
-    name: ubuntu-latest
-    runs-on: self-hosted
+    name: Clone down repo
+    runs-on: ubuntu-latest
     container: gradle:6-jdk11
     steps:
       - uses: actions/checkout@v2
