@@ -29,7 +29,7 @@ jobs:
           name: code
           path: .
       - name: Build with gradle
-        run: chmod +x ci/build-app.sh && ci/build-app.sh
+        run: chmod +x ci/build-app.sh && ci/build-app.sh && ls app/build/
       - name: Test
         run: chmod +x ci/unit-test-app.sh && ci/unit-test-app.sh
       - name: Upload build
