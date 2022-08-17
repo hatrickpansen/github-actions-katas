@@ -30,13 +30,13 @@ jobs:
           path: .
       - name: Build with gradle
         run: chmod +x ci/build-app.sh && ci/build-app.sh && ls app/build/
-      - name: Test
-        run: chmod +x ci/unit-test-app.sh && ci/unit-test-app.sh
       - name: Upload build
         uses: actions/upload-artifact@v2
         with:
           name: code
           path: .
+      - name: Test
+        run: chmod +x ci/unit-test-app.sh && ci/unit-test-app.sh
       - name: is the file there?
         run: ls app/build/
       - name: Upload jar
