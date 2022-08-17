@@ -37,6 +37,8 @@ jobs:
         with:
           name: code
           path: .
+      - name: is the file there?
+        run: ls app/build/
       - name: Upload jar
         uses: actions/upload-artifact@v2
         with:
