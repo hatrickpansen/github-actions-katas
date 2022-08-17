@@ -60,7 +60,8 @@ jobs:
           password: ${{ env.docker_password }}
       - name: Build and push
         uses: docker/build-push-action@v3
+        run: echo "${GIT_COMMIT::8}" >> $GITHUB_ENV
         with:
           context: app/
           push: true
-          tags: ${{ env.docker_username }}/micronaut-app:1.0-${{ env.GIT_COMMIT }::8}
+          tags: ${{ env.docker_username }}/micronaut-app:1.0-${{ env.GIT_COMMIT }}
